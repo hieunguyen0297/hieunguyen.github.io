@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito&display=swap');
+
+* {
+	margin: 0 auto;
+	scroll-behavior: smooth !important;
+}
+
+body {
+	background-color: rgb(41, 44, 54);
+	font-family: 'Nunito', sans-serif;
+	height: 100vh;
+}
+
+/* style for the loader */
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: #2d313f;
+	overflow-x: hidden;
+	animation: anim2 1s cubic-bezier(0.19, 1, 0.22, 1) 4s both;
+}
+
+@keyframes anim2 {
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+/* animate the loading page */
+.center-div {
+	display: flex;
+}
+
+.center-div div {
+	width: 10px;
+	height: 40px;
+	background-color: skyblue;
+	margin: 5px;
+	animation: div 1.2s infinite;
+	transition: all 1.2s ease;
+}
+
+.center-div div:nth-child(1) {
+	background-color: rgb(55, 184, 235);
+	animation-delay: 0.20s;
+}
+
+.center-div div:nth-child(2) {
+	background-color: rgb(110, 202, 238);
+	animation-delay: 0.40s;
+}
+.center-div div:nth-child(3) {
+	background-color: rgb(156, 220, 245);
+	animation-delay: 0.60s;
+}
+
+@keyframes div {
+	50% {
+		transform: scaleY(1.5);
+	}
+}
+
+/* style for under loader */
+
+.almostthere {
+	color: rgb(255, 255, 255);
+	padding-top: 10px;
+}
+
+p .space {
+	margin-left: 10px;
+}
+
+/* style for the container */
+.container {
+	width: 0;
+	height: 0;
+	animation: container 0.8s forwards;
+	animation-delay: 4s;
+}
+
+@keyframes container {
+	to {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* style for right panel when hambergerbtn clicked */
+.right-panel {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 300px;
+	right: 350px;
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+}
+
+.right-panel ul li {
+	color: cornsilk;
+	list-style: none;
+	font-size: 50px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.right-panel ul li a {
+	text-decoration: none;
+	color: cornsilk;
+}
+
+/* STYLE FOR THE BAND */
+
+.first-band {
+	width: 190px;
+	height: 5px;
+	position: relative;
+	top: -242px;
+	right: -20px;
+	background-color: rgb(174, 241, 255);
+	opacity: 1;
+	z-index: -10;
+}
+
+.second-band {
+	width: 190px;
+	height: 5px;
+	position: relative;
+	top: -178px;
+	right: -20px;
+	background-color: rgb(174, 241, 255);
+	opacity: 0;
+	z-index: -10;
+}
+
+/* STYLE FOR THE NAV */
+.nav {
+	background-color: #2d313f;
+	padding: 10px 10px;
+	display: flex;
+	height: 10vh;
+}
+
+.logo {
+	margin: 5px 40px;
+	height: 8vh;
+	width: 50%;
+}
+
+.leftnav {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.leftnav img {
+	background: #fff;
+}
+
+.nav-hamberger-btn i {
+	color: #fff;
+	position: absolute;
+	right: 100px;
+	top: 40px;
+}
+
+/* the hamberger button */
+.nav-hamberger-btn i:hover {
+	transform: scale(1.5);
+	transition: all 0.5s ease;
+}
+
+/* Home Style */
+#home {
+	height: 75vh;
+	background-color: #2d313f;
+	display: flex;
+	overflow-y: hidden;
+}
+
+.code {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 55%;
+	background-color: rgb(41, 44, 55);
+	justify-content: center;
+	align-items: center;
+}
+
+.hello-world,
+.name,
+.love-coding,
+.commiting,
+.empty {
+	display: flex;
+	align-items: center;
+	height: 10%;
+	width: 100%;
+}
+
+.image {
+	width: 45%;
+	height: 100%;
+	background-color: rgb(41, 44, 54);
+}
+
+/* style for hello world div */
+.hello-world {
+	background-color: #2d313f;
+
+	color: rgb(132, 140, 151);
+}
+
+.hello-world h1 {
+	margin-left: 100px;
+	font-weight: 600;
+	animation: type 8s steps(32);
+	font-size: 0px;
+	animation-delay: 7s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes type {
+	0% {
+		font-size: 40px;
+		width: 0ch;
+		border-right: 5px solid white;
+	}
+	100% {
+		font-size: 40px;
+		width: 35ch;
+		border-right: none;
+	}
+}
+
+/* style for name div */
+
+.name {
+	background-color: rgb(41, 44, 55);
+}
+
+.name h1 {
+	margin-left: 100px;
+	font-weight: 600;
+	animation: name 10s steps(36);
+	font-size: 0px;
+	animation-delay: 11.5s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes name {
+	0% {
+		font-size: 40px;
+		width: 0ch;
+		border-right: 5px solid rgb(255, 255, 255);
+	}
+	100% {
+		font-size: 40px;
+		width: 60ch;
+		border-right: none;
+	}
+}
+
+.name h1 span:nth-child(1),
+.name h1 span:nth-child(3),
+.name h1 span:nth-child(4),
+.name h1 span:nth-child(6),
+.name h1 span:nth-child(7),
+.name h1 span:nth-child(8),
+.name h1 span:nth-child(9) {
+	color: rgb(174, 241, 255);
+}
+
+.name h1 span:nth-child(11) {
+	color: rgb(232, 163, 236);
+}
+
+.name h1 span:nth-child(13),
+.name h1 span:nth-child(23),
+.name h1 span:nth-child(24) {
+	color: rgb(255, 255, 255);
+}
+
+.name h1 span:nth-child(21),
+.name h1 span:nth-child(14),
+.name h1 span:nth-child(15),
+.name h1 span:nth-child(16),
+.name h1 span:nth-child(17),
+.name h1 span:nth-child(18),
+.name h1 span:nth-child(19),
+.name h1 span:nth-child(20),
+.name h1 span:nth-child(22) {
+	color: rgb(255, 215, 156);
+}
+
+/* style for love-coding div */
+.love-coding {
+	background-color: #2d313f;
+	color: rgb(174, 241, 255);
+}
+
+.love-coding h1 {
+	margin-left: 100px;
+	font-weight: 600;
+	animation: coding 10s steps(39);
+	font-size: 0px;
+	animation-delay: 17.2s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes coding {
+	0% {
+		font-size: 40px;
+		width: 0ch;
+		border-right: 5px solid rgb(255, 255, 255);
+	}
+	100% {
+		font-size: 40px;
+		width: 60ch;
+		border-right: none;
+	}
+}
+
+.love-coding h1 span:nth-child(14),
+.love-coding h1 span:nth-child(15),
+.love-coding h1 span:nth-child(16),
+.love-coding h1 span:nth-child(17),
+.love-coding h1 span:nth-child(18),
+.love-coding h1 span:nth-child(19),
+:nth-child(24) {
+	color: rgb(255, 255, 255);
+}
+
+.love-coding h1 span:nth-child(21) {
+	color: rgb(232, 163, 236);
+}
+
+.love-coding h1 span:nth-child(23) {
+	color: rgb(224, 109, 115);
+}
+
+/* STYLE FOR COMMITING BOX */
+.commiting {
+	background-color: rgb(41, 44, 55)x;
+	color: rgb(255, 215, 156);
+}
+
+.commiting h1 {
+	margin-left: 100px;
+	font-weight: 600;
+	animation: commiting 10s steps(41);
+	font-size: 0px;
+	animation-delay: 23.2s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes commiting {
+	0% {
+		font-size: 40px;
+		width: 0ch;
+		border-right: 5px solid rgb(255, 255, 255);
+	}
+	100% {
+		font-size: 40px;
+		width: 60ch;
+		border-right: none;
+	}
+}
+
+.commiting h1 span:nth-child(12),
+.commiting h1 span:nth-child(13),
+.commiting h1 span:nth-child(14),
+.commiting h1 span:nth-child(15),
+.commiting h1 span:nth-child(16),
+.commiting h1 span:nth-child(17),
+.commiting h1 span:nth-child(18),
+.commiting h1 span:nth-child(19),
+.commiting h1 span:nth-child(20) {
+	color: rgb(232, 163, 236);
+}
+
+.commiting h1 span:nth-child(22),
+.commiting h1 span:nth-child(25) {
+	color: rgb(255, 255, 255);
+}
+
+.commiting h1 span:nth-child(23) {
+	color: rgb(224, 109, 115);
+}
+
+.commiting h1 span:last-child {
+	animation: last 0.7s infinite;
+	animation-delay: 26s;
+	height: 100%;
+	background-color: rgb(199, 198, 198);
+	color: rgb(206, 214, 214);
+	margin-left: 5px;
+}
+
+@keyframes last {
+	0% {
+		font-size: 0px;
+		opacity: 0;
+	}
+
+	100% {
+		font-size: 30px;
+		opacity: 1;
+	}
+}
+
+/* STYLE FOR EMPTY DIV */
+.empty {
+	background-color: #2d313f;
+}
+
+/* STYLE FOR THE BUTTON LETS TALK */
+
+.lets-talk {
+	position: relative;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.lets-talk button {
+	position: relative;
+	padding: 10px 20px;
+	background-color: rgb(255, 255, 250);
+	border: 2px solid rgb(174, 241, 255);
+	font-size: 20px;
+	font-weight: 700;
+	transition: all 1s ease;
+	animation: btn 1s forwards;
+	animation-delay: 28s;
+	opacity: 0;
+}
+
+@keyframes btn {
+	from {
+		opacity: 0;
+		left: -100px;
+	}
+	to {
+		opacity: 1;
+		left: 106px;
+	}
+}
+
+.lets-talk button:hover {
+	background-color: rgb(110, 202, 238);
+	border: 2px solid rgb(255, 255, 255);
+	transform: translateX(10px);
+}
+
+/* 
+
+
+
+
+
+
+*/
+h1 .begin {
+	margin-right: 50px;
+}
+
+h1 .space {
+	margin-right: 20px;
+}
+
+.code h2 {
+	font-size: 25px;
+	text-align: right;
+	width: 70px;
+	position: absolute;
+	color: rgb(81, 90, 120);
+}
+
+/* STYLE FOR THE RIGHT IMAGE */
+
+.card {
+	width: 99%;
+
+	height: 600px;
+	display: flex;
+
+	transition: all 0.8s ease-in-out;
+}
+.card img {
+	bottom: 180px;
+	height: 600px;
+	transition: 0.5s;
+	position: absolute;
+	opacity: 0;
+	animation: img 1s forwards;
+	animation-delay: 5.5s;
+}
+
+@keyframes img {
+	0% {
+		opacity: 0;
+		right: 280px;
+	}
+
+	100% {
+		opacity: 1;
+		right: 300px;
+	}
+}
+
+.card:hover {
+	border-radius: 20% 0 20%;
+	border: 2px solid rgb(174, 241, 255);
+}
+
+.image .card:hover img {
+	transform: translate(-15%, -10%) scale(1.1);
+}
+
+.content {
+	position: relative;
+	color: rgb(206, 214, 214);
+	left: 10%;
+	opacity: 0;
+	width: 30%;
+	height: 60%;
+	padding: 20px 20px 20px 40px;
+	transition: 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 150px;
+	text-align: left;
+}
+
+.card:hover .content {
+	opacity: 1;
+	left: 15%;
+
+	visibility: visible;
+}
+
+.content h1 {
+	position: absolute;
+	color: rgb(255, 255, 250);
+	margin-bottom: 10px;
+	left: 20px;
+	top: 10px;
+}
+
+.content .p1 {
+	position: absolute;
+	top: 75px;
+
+	letter-spacing: 3px;
+}
+
+.content .p2 {
+	position: absolute;
+	top: 160px;
+	line-height: 20px;
+	letter-spacing: 3px;
+}
+
+/* STYLE FOR THE HAND  */
+.hand {
+	color: rgb(255, 255, 255);
+	position: absolute;
+	width: 260px;
+	height: 60px;
+
+	right: 240px;
+	opacity: 0;
+	letter-spacing: 5px;
+	/* transition: all 0.5s ease-in-out; */
+	animation: hand 1s forwards;
+	animation-delay: 5.1s;
+}
+
+@keyframes hand {
+	0% {
+		opacity: 0;
+		top: 170px;
+	}
+	100% {
+		opacity: 1;
+		top: 180px;
+	}
+}
+
+.card:hover .hand {
+	visibility: hidden;
+	transition: opacity 0.4s ease-in-out;
+}
+
+.hand p {
+	transform: translateX(-30%) translateY(-30%);
+}
+
+.hand i {
+	animation: hand-icon 1s infinite;
+	transform: translateY(-50%);
+}
+
+@keyframes hand-icon {
+	to {
+		transform: translateY(-20%);
+	}
+}
+
+/* 
+
+
+
+
+
+
+*/
+
+/* STYLE FOR PROJECT PAGE */
+#project {
+	height: 75vh;
+	width: 100%;
+	background-color: rgb(41, 44, 54);
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	top: 12.6%;
+	/* overflow-y: hidden; */
+	/* overflow: hidden; */
+	z-index: -1;
+}
+
+#project h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 60px;
+	margin-bottom: 60px;
+}
+
+.projectContainer {
+	position: relative;
+	width: 1100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+.projectContainer .cardP {
+	position: relative;
+	max-width: 300px;
+	height: 220px;
+	background-image: linear-gradient(315deg, #75c6ec 0%, #77eed8 74%);
+	margin: 30px 10px;
+	padding: 20px 12px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 5px 200px rgba(0, 0, 0, 0.5);
+	transition: 0.3s ease-in-out;
+}
+
+.projectContainer .cardP:hover {
+	height: 420px;
+}
+
+.projectContainer .cardP .imgBox {
+	position: relative;
+	width: 250px;
+	height: 220px;
+	top: -60px;
+	left: 20px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projectContainer .cardP .imgBox img {
+	max-width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+.projectContainer .cardP .sometext {
+	position: relative;
+	margin-top: -140px;
+	padding-top: 10px 15px;
+	text-align: center;
+	color: #111;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+.sometext .stacks {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.sometext .stacks p {
+	padding: 4px 5px;
+	border: 2px solid rgb(127, 127, 238);
+	background-color: rgb(253, 253, 253);
+}
+
+.sometext .des {
+	letter-spacing: 2px;
+}
+
+.projectContainer .cardP:hover .sometext {
+	visibility: visible;
+	opacity: 1;
+	margin-top: -40px;
+}
+
+/*
+
+
+
+
+
+
+
+
+
+*/
+
+/* STYLE FOR THE RIGHTS ICONS */
+.right-icons {
+	position: fixed;
+	right: 8px;
+	top: 300px;
+	background-color: #2d313f;
+	width: 50px;
+	height: 400px;
+	overflow: hidden;
+	text-align: center;
+	color: rgb(206, 214, 214);
+	font-size: 30px;
+}
+
+.right-icons div {
+	padding-top: 10px;
+}
+
+.right-icons .gmail:hover,
+.github:hover,
+.linkin:hover,
+.instagram:hover {
+	transform: translateY(-15%);
+	transition: all 0.5s ease-in-out;
+	color: rgb(159, 225, 255);
+}
+
+.line {
+	height: 160px;
+	width: 3px;
+	background-color: rgb(255, 255, 250);
+	margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 375px) {
+	.leftnav .nav-hamberger-btn i {
+		right: 20px;
+		top: 25px;
+		font-size: 30px;
+	}
+
+	.logo {
+		margin: 5px 10px;
+	}
+
+	.nav {
+		height: 8vh;
+	}
+	.logo .svg {
+		width: 55px;
+		height: 55px;
+	}
+
+	#project {
+		width: 374px;
+	}
+
+	#project h1 {
+		font-size: 30px;
+		margin: 12px auto;
+	}
+	.projectContainer {
+		position: relative;
+		width: 70%;
+		display: flex;
+		justify-content: left;
+		align-items: left;
+		flex-direction: column;
+		flex-wrap: wrap;
+		/* padding: 20px; */
+	}
+
+	.projectContainer .cardP {
+		width: 240px;
+		height: 100px;
+	}
+
+	.projectContainer .cardP:nth-child(1),
+	.projectContainer .cardP:nth-child(3) {
+		height: 120px;
+	}
+
+	.projectContainer .cardP .imgBox {
+		width: 200px;
+		top: -40px;
+		left: 12px;
+	}
+	.sometext .stacks {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.sometext .stacks p {
+		width: 100%;
+	}
+
+	.sometext .des {
+		display: none;
+	}
+
+	.love-coding,
+	.love-coding,
+	.commiting,
+	.commiting {
+		display: none;
+	}
+
+	/* #home {
+		display: flex;
+		flex-direction: column;
+	} */
+
+	.code {
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.code .hello-world {
+		width: 100%;
+		overflow: visible;
+	}
+
+	.code h2 {
+		font-size: 15px;
+	}
+
+	@keyframes type {
+		0% {
+			font-size: 20px;
+			width: 0ch;
+			border-right: 5px solid rgb(255, 255, 255);
+		}
+		100% {
+			font-size: 20px;
+			width: 35ch;
+			border-right: none;
+		}
+	}
+	@keyframes name {
+		0% {
+			font-size: 20px;
+			width: 0ch;
+			border-right: 5px solid rgb(255, 255, 255);
+		}
+		100% {
+			font-size: 20px;
+			width: 25ch;
+			border-right: none;
+		}
+	}
+
+	.name h1 span:nth-child(10),
+	.name h1 span:nth-child(11),
+	.name h1 span:nth-child(12),
+	.name h1 span:nth-child(13),
+	.name h1 span:nth-child(14),
+	.name h1 span:nth-child(15),
+	.name h1 span:nth-child(16),
+	.name h1 span:nth-child(17),
+	.name h1 span:nth-child(18),
+	.name h1 span:nth-child(19),
+	.name h1 span:nth-child(20),
+	.name h1 span:nth-child(21),
+	.name h1 span:nth-child(22),
+	.name h1 span:nth-child(23),
+	.name h1 span:nth-child(24) {
+		display: none;
+	}
+
+	.right-panel {
+		right: 48px;
+	}
+
+	.right-panel ul li {
+		font-size: 25px;
+		font-weight: 600;
+	}
+
+	.first-band {
+		width: 82px;
+		height: 3px;
+
+		top: -120px;
+		right: -22px;
+	}
+
+	.second-band {
+		width: 100px;
+		height: 3px;
+		top: -88px;
+		right: -26px;
+	}
+
+	/* RIGHT ICONS */
+	.right-icons {
+		right: 8px;
+		top: 100px;
+		background: none;
+		width: 40px;
+		height: 300px;
+
+		font-size: 20px;
+	}
+
+	.image {
+		display: block;
+	}
+
+	.image .content {
+		display: none;
+	}
+
+	/* button  */
+	.lets-talk button {
+		animation-delay: 16.4s;
+		border-radius: 20px;
+		margin-left: 15px;
+	}
+
+	.card {
+		width: 0%;
+
+		height: 600px;
+		display: flex;
+
+		transition: all 0.8s ease-in-out;
+	}
+	.card img {
+		top: 50px;
+		height: 350px;
+		left: 80px;
+		transition: 0.5s;
+		position: absolute;
+		opacity: 0;
+		animation: img 1s forwards;
+		animation-delay: 5.5s;
+	}
+
+	.hand {
+		display: none;
+	}
+}
