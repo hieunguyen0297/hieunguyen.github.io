@@ -779,7 +779,7 @@ h1 .space {
 }
 
 /* MOBILE */
-@media (max-width: 375px) {
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
 	.leftnav .nav-hamberger-btn i {
 		right: 20px;
 		top: 25px;
