@@ -20,6 +20,9 @@ body {
 
 .container-center {
 	padding: 10px;
+	@media (max-width: 450px) {
+		padding: 20px 10px 10px 10px;
+	}
 }
 
 .image img{
