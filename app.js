@@ -57,7 +57,7 @@ function projectClick() {
 }
 
 function gmail() {
-    window.open("mailto:hieunguyen971002@gmail.com")
+        window.open("mailto:hieunguyen971002@gmail.com")
 }
 
 function gitHub() {
