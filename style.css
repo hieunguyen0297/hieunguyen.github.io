@@ -16,6 +16,9 @@ body {
 	align-items: center;
 	padding: 15px;
 	height: 80vh;
+	@media (max-height: 670px) {
+		height: 100vh;
+	}
 }
 
 .container-center {
